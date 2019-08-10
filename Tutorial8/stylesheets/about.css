@@ -1,0 +1,198 @@
+* {
+	margin: 0;
+	padding: 0;
+
+}
+
+.wrapper {
+	width: 100%;
+}
+
+/*Header*/
+header {
+	border: 1px solid black;
+	border-width: 0;
+	background-color: black;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+.logo {
+	width: 100px;
+	display: inline-block;
+	float: left;
+}
+.logo a {
+	text-decoration: none;
+}
+.logo a:hover {
+	opacity: 0.7;
+}
+.logo a> img {
+	width: 100px;
+	height: auto;
+}
+.title {
+	display: inline-block;
+	float: left;
+	margin: 20px 30px 10px;
+}
+
+
+.title a {
+	height: auto;
+	text-decoration: none;
+}
+.title a h2 {
+	text-align: center;
+	color: white;
+	font-size: 25px;
+}
+.title a h2:hover {
+	opacity: 0.7;
+}
+
+nav {
+	display: inline-block;
+	float: right;
+	margin: 0 15px;
+}
+
+nav ul {
+	padding: 0;
+	width: 100%;
+
+}
+
+nav ul > a {
+	text-decoration: none;
+	font-size: 15px;
+	padding: 3px;
+	color: #f20;
+	text-transform: uppercase;
+}
+nav ul > a:hover {
+	opacity: 0.7;
+}
+
+
+
+/*Content*/
+
+.img-overview {
+width: 100%;
+padding-bottom: 30px;
+
+}
+
+.img-info {
+	width: 100%;
+}
+
+.img-info h2 {
+	padding: 30px 30px 20px;
+	font-family: arial;
+	font-size: 40px;
+	color: #111;
+	line-height: 44px;
+}
+
+.img-info p {
+	padding: 0px 30px 20px;
+	font-family: arial;
+	font-size: 16px;
+	color: #111;
+	line-height: 24px;
+}
+
+
+.img-we {
+	width: 100%;
+}
+
+/*Footer*/
+
+footer {
+	float: right;
+	width: 100%;
+	height: 50px;
+	border: 1px solid black;
+	background: 50px black;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+}
+
+
+@media only screen and (min-width: 768px) {
+	.wrapper {
+		width: 600px;
+		margin: 0 auto;
+	}
+	.img-info h2 {
+	padding: 20px 0 0;
+
+	}
+	.img-info p {
+	padding: 20px 0 0;
+	}
+	.img-we {
+		padding-top: 30px;
+	}
+}
+
+
+@media only screen and (min-width: 1000px) {
+	.wrapper {
+		width: 1000px;
+	}
+	nav {
+		margin: 27.5px 50px 0 0;
+	}
+	nav ul a{
+		font-size: 20px;
+	}
+	.title {
+		margin: 25px 0 0 75px;
+	}
+
+	.img-info {
+		width: 50%;
+		float: right;
+	}
+	.img-we {
+		width: 100%;
+	}
+	.img-we {
+		padding-top: 0;
+		width: 50%;
+		float: left;
+	}
+	.img-info p {
+	padding: 20px 0 0 30px;
+	}
+	footer {
+		margin-top: 200px;
+	}
+}
+
+
+@media screen and (max-width: 450px) {
+	.logo a img {
+		width: 75px;
+		margin-left: 15px;
+	}
+	.title {
+		margin: 20px;
+	}
+	.title a h2 {
+		font-size: 20px;
+	} 
+	nav {
+		float: right;
+		margin: 0 20px 0 0;
+		font-size: 14px;
+	}
+}
+
+
