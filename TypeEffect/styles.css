@@ -1,0 +1,42 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.intro {
+	display: flex;
+	color: white;
+	height: 100vh;
+	background: rgb(179, 174, 174);
+	background-size: cover;
+}
+
+.notation {
+	margin: auto;
+}
+
+.typing {
+	position: relative;
+	margin-left: 45%;	
+}
+
+.typing::after {
+	content: "";
+	position: relative;
+	right: -5px;
+	width: 1px;
+	height: 5%;
+	border-right: 2px solid white;
+	animation: blink 0.5s infinite ease;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
