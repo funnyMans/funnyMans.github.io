@@ -83,9 +83,24 @@ div.active {
 	.field-email,
 	.field-password,
 	.field-finish {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 70%;
+		width: 45%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.field-name,
+	.field-email,
+	.field-password,
+	.field-finish {
+		width: 75%;
+	}
+}
+
+@media screen and (max-width: 310px) {
+	.field-name,
+	.field-email,
+	.field-password,
+	.field-finish {
+		width: 100%;
 	}
 }
