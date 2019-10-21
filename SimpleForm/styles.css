@@ -75,3 +75,17 @@ div.active {
 		transform: translate(-50%, -50%) rotate(0deg);
 	}
 }
+
+
+
+@media screen and (max-width: 768px) {
+	.field-name,
+	.field-email,
+	.field-password,
+	.field-finish {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 55%;
+	}
+}
