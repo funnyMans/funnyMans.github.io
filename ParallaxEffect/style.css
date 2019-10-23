@@ -6,7 +6,7 @@
 
 header {
     min-height: 100vh;
-    background: linear-gradient(240deg, #834d4d, #503d3d);
+    background: linear-gradient(240deg, #291d1d, #350e0e);
     position: relative;
     color: white;
     font-family: sans-serif;
@@ -25,13 +25,13 @@ header {
     margin-bottom: 10px;
 }
 
-.intro-text h1 {
-    font-size: 35px;
+.intro-text h3 {
+    font-size: 27px;
 }
 
 .chair {
     position: absolute;
-    height: 550px;
+    height: 80%;
     top: 90%;
     right: 15%;
     transform: translate(-10%, -90%);
@@ -39,14 +39,14 @@ header {
 
 .big-rose {
     position: absolute;
-    height: 200px;
+    height: 20%;
     top: 10%;
     right: 40%;
 }
 
 .small-rose {
     position: absolute;
-    height: 100px;
+    height: 10%;
     top: 30%;
     right: 10%;
 }
@@ -61,4 +61,57 @@ section {
     font-family: sans-serif;
     font-size: 50px;
     background-color: lightgray;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .intro-text h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+    
+    .intro-text h3 {
+        font-size: 20px;
+    }
+
+    .chair {
+        right: 7%;
+        height: 70%;
+    }
+
+    .small-rose {
+        right: 5%;
+    }
+    
+    .big-rose {
+        right: 25%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    .intro-text h1 {
+        font-size: 30px;
+        margin-bottom: 0;
+        
+    }
+    
+    .intro-text h3 {
+        font-size: 13px;
+    }
+
+    .chair {
+        height: 55%;
+        right: 7%;
+    }
+    .small-rose {
+        height: 10%;
+        top:  40%;
+    }
+
+    .big-rose {
+        height:  15%;
+        top: 25%;
+    }
 }
