@@ -1,1 +1,0 @@
-# funnyMans.github.io
