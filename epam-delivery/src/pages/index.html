@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/002ce092b2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Food Delivery</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../../public/assets/foodfood.png" alt="food" />
+        <img src="../../public/assets/deliverydelivery.png" alt="delivery" />
+      </div>
+      <div class="searchBar">
+        <input type="search" />
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="./login.html"><span>Restaurants</span></a>
+          </li>
+          <li>
+            <a href="./account.html"><span>Deals</span></a>
+          </li>
+          <li>
+            <div class="divisor-div"></div>
+          </li>
+          <li>
+            <a href="#"><span>My Orders</span></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="customer">
+        <div class="cart">
+          <i class="fa-lg fas fa-archive"></i>
+        </div>
+        <div class="userImg">
+          <img src="../../public/assets/img.png" alt="user" />
+        </div>
+      </div>
+      <div class="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <section class="best-offers">
+          <article class="desert-info card">
+            <div class="offer-img">
+              <img
+                src="../../public/assets/cake.png"
+                alt="cake"
+                class="rotate-left"
+              />
+            </div>
+            <div class="deserts-details">
+              <div>
+                <h3>All Deserts</h3>
+                <h2>20% OFF</h2>
+              </div>
+              <p>Desserty</p>
+            </div>
+          </article>
+          <article class="burgers-info card pink-bg">
+            <div class="offer-img">
+              <img src="../../public/assets/burger.png" alt="burger" />
+            </div>
+            <div class="burgers-details">
+              <div>
+                <h3>Big Burgers</h3>
+                <h2 class="orange-title">50% OFF</h2>
+              </div>
+              <p>Fooddies</p>
+            </div>
+          </article>
+        </section>
+        <section class="offer-sm-icons">
+          <div class="icon-card sm-pizza">
+            <img src="../../public/assets/pizza.png" alt="pizza" />
+            <span>pizza</span>
+          </div>
+          <div class="icon-card sm-burger sm-selected">
+            <img src="../../public/assets/smBurger.png" alt="pizza" />
+            <span>burger</span>
+          </div>
+          <div class="icon-card sm-bbq">
+            <img src="../../public/assets/meat.png" alt="pizza" />
+            <span>meat</span>
+          </div>
+          <div class="icon-card sm-sushi sm-selected">
+            <img src="../../public/assets/sushi.png" alt="pizza" />
+            <span>sushi</span>
+          </div>
+          <div class="icon-card sm-broccoli">
+            <img src="../../public/assets/broccoli.png" alt="pizza" />
+            <span>broccoli</span>
+          </div>
+          <div class="icon-card sm-cake">
+            <img src="../../public/assets/smCake.png" alt="pizza" />
+            <span>cake</span>
+          </div>
+        </section>
+      </main>
+      <aside>
+        <h2 class="aside-title">Nearby Restaurants:</h2>
+        <section class="restourants">
+          <article class="rest rest-card">
+            <div class="rest-img">
+              <p>featured</p>
+              <img src="../../public/assets/royal.png" alt="royal" />
+            </div>
+            <div class="rest-info">
+              <div class="rest-title">
+                <h4>Rest Name</h4>
+                <i class="fa-lg fas fa-archive"></i>
+              </div>
+              <div class="rest-details">
+                <i class="fas fa-clock"><span> 30-40 min</span></i>
+                <ul>
+                  <li>$32 min sum</li>
+                </ul>
+              </div>
+              <div class="sm-icons">
+                <div class="smSushi">
+                  <img src="../../public/assets/sushi.png" alt="smallBurger" />
+                  <span>Burger</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="rest rest-card">
+            <div class="rest-img">
+              <p>featured</p>
+              <img src="../../public/assets/restBurg.png" alt="rest burger" />
+            </div>
+            <div class="rest-info">
+              <div class="rest-title">
+                <h4>Rest Name</h4>
+                <i class="fa-lg fas fa-archive selected-icon"></i>
+              </div>
+              <div class="rest-details">
+                <i class="fas fa-clock"><span> 30-40 min</span></i>
+                <ul>
+                  <li>$32 min sum</li>
+                </ul>
+              </div>
+              <div class="sm-icons">
+                <div class="smBurger">
+                  <img
+                    src="../../public/assets/smBurger.png"
+                    alt="smallBurger"
+                  />
+                  <span>Burger</span>
+                </div>
+                <div class="smPizza">
+                  <img src="../../public/assets/pizza.png" alt="smallBurger" />
+                  <span>Burger</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="rest rest-card">
+            <div class="rest-img">
+              <p>featured</p>
+              <img src="../../public/assets/ninja.png" alt="ninja" />
+            </div>
+            <div class="rest-info">
+              <div class="rest-title">
+                <h4>Rest Name</h4>
+                <i class="fa-lg fas fa-archive"></i>
+              </div>
+              <div class="rest-details">
+                <i class="fas fa-clock"><span> 30-40 min</span></i>
+                <ul>
+                  <li>$32 min sum</li>
+                </ul>
+              </div>
+              <div class="sm-icons">
+                <div class="smSushi">
+                  <img src="../../public/assets/sushi.png" alt="smallBurger" />
+                  <span>Burger</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </aside>
+    </div>
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>

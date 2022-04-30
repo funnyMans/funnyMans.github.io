@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/002ce092b2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Login to Food Delivery</title>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <div class="logo">
+          <img src="../../public/assets/foodfood.png" alt="food" />
+          <img src="../../public/assets/deliverydelivery.png" alt="delivery" />
+        </div>
+
+        <div class="login-title">
+          <h1>Login</h1>
+          <span
+            >Sign in with your data that you entered during your
+            registration.</span
+          >
+        </div>
+        <form action="../pages/index.html">
+          <label for="email">
+            <span>Email</span>
+            <input type="email" placeholder=" name@example.com" />
+          </label>
+          <label for="password">
+            <span>Password</span>
+            <i class="fas fa-eye"></i>
+            <input type="password" placeholder="  min 8 characters" />
+          </label>
+          <div class="keepAlive">
+            <input type="checkbox" checked />
+            <span>keep me loged in</span>
+          </div>
+          <button type="submit" href="../pages/index.html">Login</button>
+          <a href="#"><span>Forgot password</span></a>
+        </form>
+        <div class="signUpLink">
+          <span>Dont have an account ?</span>
+          <a href="#"><span>Sign up</span></a>
+        </div>
+      </main>
+      <aside>
+        <section class="rating card">
+          <div class="intro">
+            <div class="title">
+              <h2>Overal rating</h2>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+            <button type="submit">leave review</button>
+          </div>
+          <div class="dropdown">
+            <button>
+              sort by: <span>Newest first </span><i class="fa fas fa-home"></i>
+            </button>
+          </div>
+          <article class="quote">
+            <div class="user-image">
+              <img src="../../public/assets/savannah.png" alt="user image" />
+            </div>
+            <div class="quote-details">
+              <h3>Savannah Miles</h3>
+              <div class="icons">
+                <i class="fa fas fa-home"></i>
+                <i class="fa fas fa-home"></i>
+                <i class="fa fas fa-home"></i>
+                <i class="fa fas fa-home"></i>
+                <i class="fa fas fa-home"></i>
+              </div>
+              <span>10 days ago</span>
+              <p class="quote-txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                fugiat nesciunt est unde repellat obcaecati rem quos quaerat
+                hic. Ipsam?
+              </p>
+              <div class="hand-icons">
+                <i class="fa fas fa-home"></i>
+                <i class="fa fas fa-home"></i>
+              </div>
+            </div>
+          </article>
+          <article class="quote">
+            <div class="user-image">
+              <img src="../../public/assets/jacob.png" alt="user image" />
+            </div>
+            <div class="quote-details">
+              <h3>Savannah Miles</h3>
+              <div class="icons">
+                <i class="fa fas fa-home"></i>
+                <i class="fa fas fa-home"></i>
+                <i class="fa fas fa-home"></i>
+                <i class="fa fas fa-home"></i>
+                <i class="fa fas fa-home"></i>
+              </div>
+              <span>10 days ago</span>
+              <p class="quote-txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                fugiat nesciunt est unde repellat obcaecati rem quos quaerat
+                hic. Ipsam?
+              </p>
+              <div class="hand-icons">
+                <i class="fa fas fa-home"></i>
+                <i class="fa fas fa-home"></i>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="roll card">
+          <div class="card-img">
+            <img src="../../public/assets/roll.png" alt="rolls" />
+          </div>
+          <div class="card-details">
+            <h3>Roll set</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, ab
+              veniam corporis autem labore quaerat excepturi natus porro ipsa
+              deleniti!
+            </p>
+            <div class="add-to-cart">
+              <span>$ 22.56</span>
+              <i class="fa fas fa-plus"></i>
+            </div>
+          </div>
+        </section>
+        <section class="nigiri card">
+          <div class="card-img">
+            <img src="../../public/assets/nigiri.png" alt="nigiri" />
+          </div>
+          <div class="card-details">
+            <h3>Roll set</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, ab
+              veniam corporis autem labore quaerat excepturi natus porro ipsa
+              deleniti!
+            </p>
+            <span>$ 22.56</span>
+          </div>
+
+          <div>
+            <div class="add-to-cart">
+              <div class="count">
+                <i class="fa fas fa-minus"></i>
+                <span>1</span>
+                <i class="fa fas fa-plus"></i>
+              </div>
+              <button><i class="fa fas fa-plus"> Add to Cart</i></button>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+    <script src="../scripts/login.js"></script>
+  </body>
+</html>

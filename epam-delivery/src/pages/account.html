@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/account.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/002ce092b2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Food Delivery</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../../public/assets/foodfood.png" alt="food" />
+        <img src="../../public/assets/deliverydelivery.png" alt="delivery" />
+      </div>
+      <div class="searchBar">
+        <input type="search" />
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html"><span>Restaurants</span></a>
+          </li>
+          <li>
+            <a href="login.html"><span>Deals</span></a>
+          </li>
+          <li>
+            <div class="divisor-div"></div>
+          </li>
+          <li>
+            <a href="#"><span>My Orders</span></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="customer">
+        <div class="cart">
+          <i class="fa-lg fas fa-archive"></i>
+        </div>
+        <div class="userImg">
+          <img src="../../public/assets/img.png" alt="user" />
+        </div>
+      </div>
+      <div class="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <div class="container">
+      <aside class="settings">
+        <h2 class="content-title">Settings</h2>
+        <article class="account selected-content">
+          <i class="fa-lg fas fa-user selected-icon"></i>
+          <div class="art-title">
+            <h3>Accounts</h3>
+            <p>Personal information</p>
+          </div>
+        </article>
+        <article class="address">
+          <i class="fa-lg fas fa-map"></i>
+          <div class="art-title">
+            <h3>Address</h3>
+            <p>Shippings addresses</p>
+          </div>
+        </article>
+        <article class="payment">
+          <i class="fa-lg fas fa-question"></i>
+          <div class="art-title">
+            <h3>Payment methods</h3>
+            <p>Connected credit cards</p>
+          </div>
+        </article>
+        <article class="security">
+          <i class="fa-lg fas fa-lock"></i>
+          <div class="art-title">
+            <h3>Security</h3>
+            <p>Password, 2FA</p>
+          </div>
+        </article>
+      </aside>
+      <main class="personal-info">
+        <h2>Account</h2>
+        <article class="acc-card">
+          <h4 class="content-title">Personal information</h4>
+          <p>avatar</p>
+          <div class="user-intro">
+            <div class="user-avatar">
+              <img src="../../public/assets/img.png" alt="user image" />
+            </div>
+            <button type="submit">change</button>
+            <button type="submit">remove</button>
+          </div>
+          <form action="../pages/login.html">
+            <label for="firstName">
+              <span>First name</span>
+              <input type="text" value="Jane" /> </label
+            ><label for="lastName">
+              <span>Last name</span>
+              <input type="text" value="Robertson" /> </label
+            ><label for="email">
+              <span>Email</span>
+              <input type="email" value="jane.robertson@example.com" />
+            </label>
+            <label for="phone number">
+              <span>Phone number</span>
+              <input type="number" value="217.5550113" />
+            </label>
+            <fieldset>
+              <legend>Email notifications</legend>
+              <label for="deals">
+                <input
+                  type="checkbox"
+                  name="favorite_pet"
+                  value="New deals"
+                  checked="true"
+                />New deals
+              </label>
+              <label for="restaurants">
+                <input
+                  type="checkbox"
+                  name="favorite_pet"
+                  value="New restaurants"
+                  checked="true"
+                />New restaurants
+              </label>
+              <label for="orders">
+                <input
+                  type="checkbox"
+                  name="favorite_pet"
+                  value="Order statuses"
+                  checked="true"
+                />Order statuses
+              </label>
+              <label for="password">
+                <input
+                  type="checkbox"
+                  name="favorite_pet"
+                  value="Password changes"
+                  checked="true"
+                />Passwordchanges
+              </label>
+              <label for="offers">
+                <input
+                  type="checkbox"
+                  name="favorite_pet"
+                  value="Special offers"
+                  checked="true"
+                />Special offers
+              </label>
+              <label for="news">
+                <input
+                  type="checkbox"
+                  name="favorite_pet"
+                  value="Newsletter"
+                  checked="true"
+                />Newsletter
+              </label>
+            </fieldset>
+          </form>
+          <div class="handler-btns">
+            <button class="logout-btn" type="submit">Log out</button>
+            <div class="underline"></div>
+            <div class="handle-changes">
+              <button class="discard-chgs" type="reset">Discard changes</button>
+              <button class="save-chgs" type="submit">Save changes</button>
+            </div>
+          </div>
+        </article>
+      </main>
+    </div>
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>
