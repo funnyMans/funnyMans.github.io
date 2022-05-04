@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="table-title">Job Details:</h1>
+    <table class="job-table">
+      <tr>
+        <th>Description:</th>
+        <td>
+          <input type="text" name="title" />
+        </td>
+      </tr>
+      <tr>
+        <th>Company Name:</th>
+        <td class="company-area">
+          <textarea name="companyName" id="company" rows="3"></textarea>
+          <span>Brief Description should have almost 500 characters</span>
+        </td>
+      </tr>
+      <tr>
+        <th>Contact number:</th>
+        <td>
+          <input type="text" name="contactNumber" />
+        </td>
+      </tr>
+      <tr>
+        <th>Contact person:</th>
+        <td>
+          <input type="text" name="contactPerson" />
+        </td>
+      </tr>
+      <tr>
+        <th>Email:</th>
+        <td>
+          <input type="text" name="email" />
+        </td>
+      </tr>
+      <tr>
+        <th>Work status:</th>
+        <td>
+          <fieldset>
+            <input type="checkbox" name="options" value="fullTime" />Full time
+            <input type="checkbox" name="options" value="partTime" />Part time
+            <input type="checkbox" name="options" value="perDim" />Per dim
+            <input type="checkbox" name="options" value="others" />Others
+          </fieldset>
+        </td>
+      </tr>
+      <tr>
+        <th>Salary:</th>
+        <td>
+          <input type="text" name="workStatus" />
+          <select name="currency">
+            <option value="dollars">US dollars</option>
+            <option value="rubles">RU ruble</option>
+            <option value="drams">AM drams</option>
+          </select>
+          <select name="period">
+            <option value="yearly">Yearly</option>
+            <option value="monthly">Monthly</option>
+            <option value="weekly">Weekly</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>Experience(Years):</th>
+        <td>
+          <input type="text" name="experience" />
+        </td>
+      </tr>
+      <tr>
+        <th>Location:</th>
+        <td>
+          <input type="text" name="salary" />
+        </td>
+      </tr>
+      <tr>
+        <th>Qualification:</th>
+        <td class="qualification">
+          <select name="qualification" size="4">
+            <option value="any">Any</option>
+            <option value="highschool">Highschool/option></option>
+            <option value="associate">Associate</option>
+            <option value="preBachelors">Pre Bachelors</option>
+          </select>
+          <button>ADD >></button>
+          <button><span><< Remove</span></button>
+          <textarea name="qualification" value="any">any</textarea>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <button type="submit">Submit</button>
+        </th>
+        <td>
+          <button type="reset">Reset</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

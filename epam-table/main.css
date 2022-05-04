@@ -1,0 +1,35 @@
+.table-title {
+  text-align: center;
+}
+
+.job-table {
+  margin: 0 auto;
+}
+
+.job-table,
+th,
+td {
+  border: 2px solid rgb(114, 104, 104);
+  border-style: dotted;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+th {
+  text-align: end;
+}
+.company-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.company-area > textarea,
+.qualification > textarea {
+  max-width: 30%;
+  resize: none;
+  overflow-y: scroll;
+}
