@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/002ce092b2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./index.css" />
+    <title>EPAM-form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title flip">Contact Us</h1>
+      <div class="underline"></div>
+      <header class="main-header">
+        <div class="address flex">
+          <h2>Address</h2>
+          <span>Saint Marco str 6th</span>
+          <span>floor, Tokyo, Japan, 12345</span>
+        </div>
+        <div class="contacts flex">
+          <a href="tel:123-456-789" class="call">
+            <span class="fa fas fa-phone"> +123-456-789</span>
+          </a>
+          <a href="mailto:@gmail.com" class="mail">
+            <span class="fa fas fa-envelope"> example@gmail.com</span>
+          </a>
+        </div>
+        <div class="location">
+          <span class="fas fa-map-marker-alt fa-4x flip"></span>
+        </div>
+      </header>
+      <div class="content">
+        <main class="main-content">
+          <form action="https://vlo-resort.netlify.com" class="contact-form">
+            <div class="info-inputs">
+              <label for="name" name="userName">
+                <input type="text" name="userName" placeholder="Name" />
+              </label>
+              <label for="name" name="userName">
+                <input type="text" name="userName" placeholder="Company" />
+              </label>
+              <label for="name" name="userName">
+                <input type="text" name="userName" placeholder="Email" />
+              </label>
+              <label for="name" name="userName">
+                <input type="text" name="userName" placeholder="Mobile" />
+              </label>
+            </div>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="message..."
+            ></textarea>
+            <button type="submit" class="send">Send</button>
+          </form>
+        </main>
+        <aside class="aside-content">
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.535296757408!2d-0.13237858469105837!3d51.52174101747622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2e1672c317%3A0x2eb39a3b3d33d9f5!2zTWFsZXQgU3QsIExvbmRvbiBXQzFFIDdIWCwg0JLQtdC70LjQutC-0LHRgNC40YLQsNC90LjRjw!5e0!3m2!1sru!2s!4v1651929581343!5m2!1sru!2s"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="social-icons">
+            <a href="https://facebook.com">
+              <span class="fab fa-facebook-square fa-3x fb"></span>
+            </a>
+            <a href="https://twitter.com">
+              <span class="fab fa-twitter-square fa-3x tw"></span>
+            </a>
+            <a href="https://linkedin.com">
+              <span class="fab fa-linkedin fa-3x ln"></span>
+            </a>
+            <a href="https://github.com/funnyMans">
+              <span class="fab fa-github-square fa-3x gt"></span>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>
