@@ -1,0 +1,201 @@
+@import "../../../variables";
+@mixin nunito($size, $weight) {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+/********************* MAIN ****************/
+
+@mixin logo {
+  max-width: 30%;
+  .logo-img {
+    min-width: 80px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@mixin login-title {
+  @include nunito(4rem, 700);
+  cursor: pointer;
+  transition: 4s;
+  &:hover {
+    transform: translateX(50px);
+  }
+  color: $neutral-black; //neutral-black;
+}
+
+@mixin login-text {
+  @include nunito(1rem, 400);
+  color: $neutral-gray-dark;
+}
+
+@mixin login-form {
+  @include container(flex, column, space-between, stratch, 0.5rem);
+  width: 100%;
+  label {
+    position: relative;
+    @extend .login-form;
+    @include nunito(14px, 600);
+    cursor: pointer;
+    &:focus-within {
+      color: $primary-default;
+    }
+    input {
+      padding: 10px 0 10px 10px;
+      border: 1px solid $neutral-gray-light;
+      border-radius: 8px;
+      color: $neutral-gray;
+    }
+    .fas {
+      position: absolute;
+      bottom: 20%;
+      right: 5%;
+    }
+  }
+  .keepAlive {
+    @include nunito(14px, 400);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    [type="checkbox"] {
+      border: 1px solid $neutral-gray-light;
+      border-radius: 4px;
+    }
+    span {
+      color: $neutral-black;
+    }
+  }
+  .login-btn {
+    @include container(flex, row, center, center, 0);
+    @include nunito(14px, 700);
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: $main-white;
+    cursor: pointer;
+    background: $primary-default;
+    box-shadow: 0px 8px 20px rgba(78, 96, 255, 0.16);
+  }
+  .forgot-pass {
+    align-self: center;
+    color: $primary-default;
+  }
+}
+
+@mixin create-account {
+  align-self: center;
+  a {
+    color: $primary-default;
+  }
+}
+/************************* ASIDE *******************/
+@mixin aside-card {
+  @include container(flex, column, space-between, center, 1rem);
+  padding: 2rem;
+  background: $main-white;
+  border: 0.894286px solid $neutral-gray-lightest;
+  border-radius: 14.3086px;
+  .intro {
+    @include container(flex, row, space-between, center, 1rem);
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $neutral-gray-light;
+    cursor: pointer;
+    transition: 4s;
+    &:hover {
+      transform: translateX(-50px);
+    }
+    .title {
+      @include nunito(11, 700);
+      h4 {
+        color: $neutral-black;
+      }
+      span {
+        color: $primary-default;
+      }
+    }
+    .leave-review {
+      @include nunito(14, 700);
+      padding: 12px 16px;
+      color: $primary-default;
+      border: 1px solid $primary-default;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+  .select-reviews {
+    padding: 8px 8px 8px 12px;
+    background: $main-white;
+    border: 1px solid $neutral-gray-light;
+    border-radius: 8px;
+  }
+  .quote {
+    @include container(flex, row, flex-start, flex-start, 0.5rem);
+    .quote-details {
+      @include container(flex, column, space-between, flex-start, 0);
+      span {
+        color: $primary-default;
+      }
+      .quote-wrap {
+        @extend .quote-details;
+        p {
+          @include nunito(14, 400);
+          color: $neutral-black;
+        }
+        .hand-icons {
+          .dislike {
+            transform: rotateX(180deg);
+          }
+        }
+      }
+    }
+  }
+  .card-details {
+    h3 {
+      @include nunito(20, 700);
+      color: $neutral-black;
+    }
+    span {
+      @include nunito(14, 400);
+      color: $neutral-black;
+    }
+    .add-to-cart {
+      display: flex;
+      justify-content: space-between;
+      .price {
+        @include nunito(24px, 70);
+      }
+      .fa-plus-circle {
+        color: $primary-default;
+        cursor: pointer;
+      }
+    }
+  }
+  .add-btn {
+    display: flex;
+    width: 100px;
+    margin-top: 1rem;
+    padding: 15px 10px;
+    color: $primary-default;
+    background: $neutral-gray-lightest;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+}
+
+@mixin super-text {
+  @include container(flex, column, center, center, 0);
+  width: 55%;
+  margin-bottom: 5%;
+  h2 {
+    @include nunito(32px, 700);
+    color: $main-white;
+  }
+  p {
+    @include nunito(14, 400);
+    color: $main-white;
+    text-align: center;
+  }
+}

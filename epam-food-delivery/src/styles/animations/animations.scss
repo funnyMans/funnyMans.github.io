@@ -1,0 +1,91 @@
+@mixin keyframes-flip($name) {
+  @keyframes #{$name} {
+    0% {
+      transform: rotateY(0);
+      animation-timing-function: ease-out;
+    }
+    40% {
+      transform: rotateY(170deg);
+      animation-timing-function: ease-out;
+    }
+    50% {
+      transform: rotateY(190deg) scale(1);
+      animation-timing-function: ease-out;
+    }
+    80% {
+      transform: rotateY(360deg) scale(0.95);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: scale(1);
+      animation-timing-function: ease-in;
+    }
+  }
+}
+
+@mixin animations-flip {
+  @include keyframes-flip(flip);
+
+  .flip {
+    animation-name: flip;
+    animation-duration: 17s;
+    backface-visibility: visible !important;
+  }
+}
+
+@mixin keyframes-bounce($name) {
+  @keyframes #{$name} {
+    0% {
+      transform: translateY(0);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@mixin animations-bounce {
+  @include keyframes-bounce(bounce);
+
+  .bounce {
+    animation-name: bounce;
+    animation-duration: 17s;
+    backface-visibility: visible !important;
+  }
+}
+
+@mixin keyframes-bounceInDown($name) {
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateY(-2000px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    80% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@mixin animations-bounceInDown {
+  @include keyframes-bounceInDown(bounce-down);
+  .bounceInDown {
+    animation-name: bounce-down;
+    animation-duration: 4s;
+    backface-visibility: visible !important;
+  }
+}

@@ -1,0 +1,35 @@
+@import "mixins", "../../../variables";
+@mixin container($dis, $dir, $justCont, $alItem, $gap) {
+  display: $dis;
+  flex-direction: $dir;
+  justify-content: $justCont;
+  align-items: $alItem;
+  gap: $gap;
+}
+
+@mixin main-content {
+  @media only screen and (min-width: 780px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .best-offers {
+    @include best-offers;
+  }
+  .offer-sm-icons {
+    @include offer-sm-icons;
+  }
+}
+
+@mixin aside-content {
+  @include container(flex, column, space-between, center, 3rem);
+  @media only screen and (min-width: 780px) {
+    padding-top: 0;
+  }
+  padding: 2rem;
+  .aside-title {
+    @include aside-title;
+  }
+  .restaurants {
+    @include restaurants;
+  }
+}

@@ -1,0 +1,27 @@
+@import "components";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  @include container(flex, column, space-between, center, 2rem);
+  min-height: 100vh;
+  padding: 2rem;
+  @media only screen and (min-width: 780px) {
+    flex-direction: row;
+    padding: 0 2rem;
+  }
+  .login {
+    @include container(flex, column, space-between, flex-start, 1rem);
+    @include login;
+    padding: 1rem 0 5rem 0;
+    min-width: 30%;
+    min-height: 100vh;
+  }
+  .aside-content {
+    @include aside-content;
+    min-height: 100vh;
+  }
+}

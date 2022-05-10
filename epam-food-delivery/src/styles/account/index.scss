@@ -1,0 +1,25 @@
+@import "components", "mixins", "../layouts/header/index";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-header {
+  @include main-header;
+}
+
+.main-container {
+  @include container(flex, column, flex-start, stratch, 2rem);
+  @media only screen and (min-width: 780px) {
+    flex-direction: row;
+    padding: 1rem 7rem;
+  }
+  min-height: 100vh;
+  padding: 2rem;
+  .settings {
+    @include settings;
+  }
+  .personal-info {
+    @include personal-info;
+  }
+}
