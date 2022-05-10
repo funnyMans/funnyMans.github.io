@@ -1,0 +1,320 @@
+/********************* MAIN ****************/
+/************************* ASIDE *******************/
+@import "../../home/mixins.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 10rem;
+}
+.main-header .logo img {
+  width: 100%;
+}
+.main-header .search-bar {
+  margin-left: -15rem;
+}
+@media only screen and (max-width: 550px) {
+  .main-header .search-bar {
+    display: none;
+  }
+}
+.main-header .search-bar .main-search {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  padding: 5px;
+  border-radius: 16px;
+}
+.main-header .search-bar .main-search:focus {
+  border-color: #4e60ff;
+}
+.main-header .search-bar .search-btn {
+  padding: 10px 15px;
+  color: #4e60ff;
+  border: #4e60ff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.main-header .main-nav {
+  display: flex;
+}
+@media only screen and (max-width: 800px) {
+  .main-header .main-nav {
+    display: none;
+  }
+}
+.main-header .main-nav .main-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+.main-header .main-nav .main-list li a {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: #4e60ff;
+  text-decoration: none;
+}
+.main-header .customer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-header .customer .cart {
+  color: #4e60ff;
+}
+.main-header .customer .user-img {
+  width: 70%;
+}
+.main-header .menu {
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background-color: #c7c8d2;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 780px) {
+  .main-header .menu {
+    display: none;
+  }
+}
+.main-header .menu div {
+  border: 1px solid #2b2b43;
+}
+@media only screen and (max-width: 800px) {
+  .main-header {
+    display: none;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.main-container .main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0 5rem 0;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .main-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.main-container .main-content .best-offers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .main-content .best-offers {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+.main-container .main-content .best-offers .offer-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f3f4ff;
+  border-radius: 16px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .main-content .best-offers .offer-card {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 780px) {
+  .main-container .main-content .best-offers .desert-info {
+    justify-self: flex-start;
+  }
+}
+.main-container .main-content .best-offers .desert-info .desert-details h3 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14;
+  color: #2b2b43;
+}
+.main-container .main-content .best-offers .desert-info .desert-details h2 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24;
+  color: #4e60ff;
+}
+.main-container .main-content .best-offers .burgers-info .burgers-details h3 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14;
+  color: #2b2b43;
+}
+.main-container .main-content .best-offers .burgers-info .burgers-details h2 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24;
+  color: #fd6d22;
+}
+.main-container .main-content .offer-sm-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  cursor: pointer;
+}
+.main-container .main-content .offer-sm-icons .icon-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 100px;
+  min-height: 80px;
+  border: 1px solid #edeef2;
+  border-radius: 16px;
+}
+.main-container .aside-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .aside-content {
+    padding-top: 0;
+  }
+}
+.main-container .aside-content .aside-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  align-self: flex-start;
+  color: #2b2b43;
+}
+.main-container .aside-content .restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .aside-content .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.main-container .aside-content .restaurants .rest-card {
+  border: 1px solid #edeef2;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.main-container .aside-content .restaurants .rest-card .rest-img {
+  position: relative;
+}
+.main-container .aside-content .restaurants .rest-card .rest-img .featured {
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+  background-color: #4e60ff;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+.main-container .aside-content .restaurants .rest-card .rest-img img {
+  width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.main-container .aside-content .restaurants .rest-card .rest-info {
+  padding-bottom: 1rem;
+}
+.main-container .aside-content .restaurants .rest-card .rest-info .rest-title {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.main-container .aside-content .restaurants .rest-card .rest-info .rest-title .rest-name {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #2b2b43;
+}
+.main-container .aside-content .restaurants .rest-card .rest-info .rest-title .fa-archive {
+  color: #c7c8d2;
+}
+.main-container .aside-content .restaurants .rest-card .rest-info .rest-title .active {
+  color: #4e60ff;
+}
+.main-container .aside-content .restaurants .rest-card .rest-info .rest-details {
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+.main-container .aside-content .restaurants .rest-card .rest-info .rest-details .fa-clock {
+  color: #4e60ff;
+}
+.main-container .aside-content .restaurants .rest-card .rest-info .rest-details .min-sum li {
+  color: #4e60ff;
+}
+.main-container .aside-content .restaurants .rest-card .rest-info .sm-icons {
+  padding-left: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.main-container .aside-content .restaurants .rest-card .rest-info .sm-icons .sm-icon {
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #83859c;
+  border-radius: 16px;
+  background-color: #edeef2;
+}/*# sourceMappingURL=index.css.map */

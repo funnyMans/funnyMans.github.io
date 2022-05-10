@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/login/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/002ce092b2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Login to Food Delivery</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <main class="login">
+        <div class="logo">
+          <img
+            src="../../public/assets/mainLogo.png"
+            alt="logo"
+            class="logo-img"
+          />
+        </div>
+        <div>
+          <h1 class="login-title bounceInDown">Login</h1>
+          <span class="login-text">
+            Sign in with your data that you entered during your
+            registration.</span
+          >
+          <form action="../pages/index.html" class="login-form" name="login">
+            <label name="email">
+              <span>Email:</span>
+              <input
+                name="email"
+                type="email"
+                placeholder=" name@example.com"
+              />
+            </label>
+            <label name="password">
+              <span>Password:</span>
+              <input
+                name="password"
+                type="password"
+                placeholder="  min 8 characters"
+              />
+              <span class="fas fa-eye"></span>
+            </label>
+            <div class="keepAlive">
+              <input name="" type="checkbox" checked />
+              <span>Keep me loged in</span>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <a href="#" class="forgot-pass"><span>Forgot password</span></a>
+          </form>
+        </div>
+        <div class="create-account">
+          <span>Dont have an account ?</span>
+          <a href="#"><span>Sign up</span></a>
+        </div>
+      </main>
+      <aside class="aside-content">
+        <div class="rating card">
+          <div class="intro">
+            <div class="title">
+              <h4>Overal rating and Animation Here</h4>
+              <span>4.4</span>
+              <span class="icons">
+                <span class="fa fas fa-star fa-xs"></span>
+                <span class="fa fas fa-star fa-xs"></span>
+                <span class="fa fas fa-star fa-xs"></span>
+                <span class="fa fas fa-star fa-xs"></span>
+                <span class="fa fas fa-star fa-xs"></span>
+              </span>
+            </div>
+            <button class="leave-review">leave review</button>
+          </div>
+          <select name="reviews" class="select-reviews">
+            <option value="default" selected hidden>
+              Sort by: Newest First
+            </option>
+            <option value="newest">Newest First</option>
+            <option value="mostViewed">Most Viewed</option>
+          </select>
+          <div class="quote">
+            <img src="../../public/assets/savannah.png" alt="user image" />
+            <div class="quote-details">
+              <span>Savannah Miles</span>
+              <span
+                ><span class="icons">
+                  <span class="fa fas fa-star fa-xs"></span>
+                  <span class="fa fas fa-star fa-xs"></span>
+                  <span class="fa fas fa-star fa-xs"></span>
+                  <span class="fa fas fa-star fa-xs"></span>
+                  <span class="fa fas fa-star fa-xs"></span>
+                </span>
+                <span>10 days ago</span>
+              </span>
+              <div class="quote-wrap">
+                <p class="quote-txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  fugiat nesciunt est unde repellat obcaecati rem quos quaerat
+                  hic. Ipsam?
+                </p>
+                <div class="hand-icons">
+                  <span class="fa fas fa-thumbs-up like"></span>14
+                  <span class="fa fas fa-thumbs-down dislike"> </span>4
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="quote">
+            <img src="../../public/assets/jacob.png" alt="user image" />
+            <div class="quote-details">
+              <span>Savannah Miles</span>
+              <span
+                ><span class="icons">
+                  <span class="fa fas fa-star fa-xs"></span>
+                  <span class="fa fas fa-star fa-xs"></span>
+                  <span class="fa fas fa-star fa-xs"></span>
+                  <span class="fa fas fa-star fa-xs"></span>
+                  <span class="fa fas fa-star fa-xs"></span>
+                </span>
+                <span>10 days ago</span></span
+              >
+              <div class="quote-wrap">
+                <p class="quote-txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  fugiat nesciunt est unde repellat obcaecati rem quos quaerat
+                  hic. Ipsam?
+                </p>
+                <div class="hand-icons">
+                  <span class="fa fas fa-thumbs-up like"></span>14
+                  <span class="fa fas fa-thumbs-down dislike"> </span>4
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="roll card">
+          <div class="card-img">
+            <img src="../../public/assets/roll.png" alt="rolls" />
+          </div>
+          <div class="card-details">
+            <h3>Roll set</h3>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, ab
+              veniam !
+            </span>
+            <div class="add-to-cart">
+              <span class="price">$ 22.56</span>
+              <i class="fas fa-plus-circle fa-2x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="nigiri card">
+          <div class="card-img">
+            <img src="../../public/assets/nigiri.png" alt="nigiri" />
+          </div>
+          <div class="card-details">
+            <h3>Roll set</h3>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, ab
+              veniam corporis autem labore quaerat excepturi natus porro ipsa
+              deleniti!
+            </span>
+            <div class="price">$ 44.1</div>
+          </div>
+          <div>
+            <div class="add-to-cart">
+              <div>
+                <i class="fas fa-minus-circle"></i>
+                <span>1</span>
+                <span class="fas fa-plus-circle"></span>
+              </div>
+              <button class="add-btn">
+                <s class="fas fa-plus-circle fa-2x"></s>
+                <p>Add to Cart</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="super-text">
+          <h2>Leave reviews for all meals</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Exercitationem molestias quos ea commodi rerum eaque velit magni
+            voluptatibus dolorum explicabo!
+          </p>
+        </div>
+      </aside>
+    </div>
+    <script src="../scripts/login.js"></script>
+  </body>
+</html>

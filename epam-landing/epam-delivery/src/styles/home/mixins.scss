@@ -1,0 +1,171 @@
+@import "../../../variables";
+@mixin nunito($size, $weight) {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+/********************* MAIN ****************/
+
+@mixin best-offers {
+  @include container(flex, column, space-evenly, center, 1rem);
+  @media only screen and (min-width: 780px) {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .offer-card {
+    @include offer-card;
+  }
+  .desert-info {
+    @include desert-info;
+  }
+  .burgers-info {
+    @include burgers-info;
+  }
+}
+
+@mixin offer-sm-icons {
+  @include container(flex, row, space-between, center, 0.5rem);
+  padding: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  cursor: pointer;
+  .icon-card {
+    @include icon-card;
+  }
+}
+
+//offer mixins
+@mixin offer-card {
+  @include container(flex, column, space-evenly, center, 2rem);
+  padding: 2rem;
+  background-color: $primary-light;
+  border-radius: 16px;
+  cursor: pointer;
+  @media only screen and (min-width: 780px) {
+    @include container(flex, row-reverse, space-evenly, center, 4rem);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@mixin desert-info {
+  @media only screen and (min-width: 780px) {
+    justify-self: flex-start;
+  }
+  .desert-details {
+    h3 {
+      @include nunito(14, 400);
+      color: $neutral-black;
+    }
+    h2 {
+      @include nunito(24, 700);
+      color: $primary-default;
+    }
+  }
+}
+
+@mixin burgers-info {
+  .burgers-details {
+    h3 {
+      @include nunito(14, 400);
+      color: $neutral-black;
+    }
+    h2 {
+      @include nunito(24, 700);
+      color: $secondary-default;
+    }
+  }
+}
+
+//icons-mixins
+
+@mixin icon-card {
+  @include container(flex, column, center, center, 0.5rem);
+  min-width: 100px;
+  min-height: 80px;
+  border: 1px solid $neutral-gray-lightest;
+  border-radius: 16px;
+}
+/************************* ASIDE *******************/
+@mixin aside-title {
+  @include nunito(20px, 700);
+  align-self: flex-start;
+  color: $neutral-black;
+}
+@mixin restaurants {
+  @include container(flex, column, space-between, center, 2rem);
+  @media only screen and (min-width: 780px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .rest-card {
+    border: 1px solid $neutral-gray-lightest;
+    border-radius: 16px;
+    cursor: pointer;
+    .rest-img {
+      position: relative;
+      .featured {
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $main-white;
+        background-color: $primary-default;
+        border-top-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+      }
+      img {
+        width: 100%;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+      }
+    }
+    .rest-info {
+      padding-bottom: 1rem;
+      .rest-title {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        .rest-name {
+          @include nunito(18px, 700);
+          color: $neutral-black;
+        }
+        .fa-archive {
+          color: $neutral-gray-light;
+        }
+        .active {
+          color: $primary-default;
+        }
+      }
+      .rest-details {
+        padding: 1rem;
+        display: flex;
+        gap: 2rem;
+        .fa-clock {
+          color: $primary-default;
+        }
+        .min-sum {
+          li {
+            color: $primary-default;
+          }
+        }
+      }
+      .sm-icons {
+        padding-left: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        .sm-icon {
+          padding: 7px 10px;
+          display: flex;
+          align-items: center;
+          border: 1px solid $neutral-gray;
+          border-radius: 16px;
+          background-color: $neutral-gray-lightest;
+        }
+      }
+    }
+  }
+}

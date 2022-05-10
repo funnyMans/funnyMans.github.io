@@ -1,0 +1,383 @@
+/********************* MAIN ****************/
+/************************* ASIDE *******************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 2rem;
+}
+@media only screen and (min-width: 780px) {
+  .main-container {
+    flex-direction: row;
+    padding: 0 2rem;
+  }
+}
+.main-container .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0 5rem 0;
+  min-width: 30%;
+  min-height: 100vh;
+}
+@-webkit-keyframes bounce-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.main-container .login .bounceInDown {
+  -webkit-animation-name: bounce-down;
+          animation-name: bounce-down;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-backface-visibility: visible !important;
+          backface-visibility: visible !important;
+}
+.main-container .login .logo {
+  max-width: 30%;
+  cursor: pointer;
+  transition: 3s ease;
+}
+.main-container .login .logo .logo-img {
+  min-width: 80px;
+  width: 100%;
+  height: auto;
+}
+.main-container .login .logo:hover {
+  transform: rotateX(80deg);
+}
+.main-container .login .login-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  cursor: pointer;
+  transition: 4s;
+  color: #2b2b43;
+}
+.main-container .login .login-title:hover {
+  transform: translateX(50px);
+}
+.main-container .login .login-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #545563;
+}
+.main-container .login .login-form, .main-container .login .login-form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stratch;
+  gap: 0.5rem;
+  width: 100%;
+}
+.main-container .login .login-form label {
+  position: relative;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.main-container .login .login-form label:focus-within {
+  color: #4e60ff;
+}
+.main-container .login .login-form label input {
+  padding: 10px 0 10px 10px;
+  border: 1px solid #c7c8d2;
+  border-radius: 8px;
+  color: #83859c;
+}
+.main-container .login .login-form label .fas {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+}
+.main-container .login .login-form .keepAlive {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.main-container .login .login-form .keepAlive [type=checkbox] {
+  border: 1px solid #c7c8d2;
+  border-radius: 4px;
+}
+.main-container .login .login-form .keepAlive span {
+  color: #2b2b43;
+}
+.main-container .login .login-form .login-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  background: #4e60ff;
+  box-shadow: 0px 8px 20px rgba(78, 96, 255, 0.16);
+}
+.main-container .login .login-form .forgot-pass {
+  align-self: center;
+  color: #4e60ff;
+}
+.main-container .login .create-account {
+  align-self: center;
+}
+.main-container .login .create-account a {
+  color: #4e60ff;
+}
+.main-container .aside-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: #4e60ff;
+  min-height: 100vh;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .aside-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
+.main-container .aside-content .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: #ffffff;
+  border: 0.894286px solid #edeef2;
+  border-radius: 14.3086px;
+}
+.main-container .aside-content .card .intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #c7c8d2;
+  cursor: pointer;
+  transition: 4s;
+}
+.main-container .aside-content .card .intro:hover {
+  transform: translateX(-50px);
+}
+.main-container .aside-content .card .intro .title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11;
+}
+.main-container .aside-content .card .intro .title h4 {
+  color: #2b2b43;
+}
+.main-container .aside-content .card .intro .title span {
+  color: #4e60ff;
+}
+.main-container .aside-content .card .intro .leave-review {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14;
+  padding: 12px 16px;
+  color: #4e60ff;
+  border: 1px solid #4e60ff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.main-container .aside-content .card .select-reviews {
+  padding: 8px 8px 8px 12px;
+  background: #ffffff;
+  border: 1px solid #c7c8d2;
+  border-radius: 8px;
+}
+.main-container .aside-content .card .quote {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.main-container .aside-content .card .quote .quote-details, .main-container .aside-content .card .quote .quote-details .quote-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+}
+.main-container .aside-content .card .quote .quote-details span, .main-container .aside-content .card .quote .quote-details .quote-wrap span {
+  color: #4e60ff;
+}
+.main-container .aside-content .card .quote .quote-details .quote-wrap p {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14;
+  color: #2b2b43;
+}
+.main-container .aside-content .card .quote .quote-details .quote-wrap .hand-icons .dislike {
+  transform: rotateX(180deg);
+}
+.main-container .aside-content .card .card-details h3 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20;
+  color: #2b2b43;
+}
+.main-container .aside-content .card .card-details span {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14;
+  color: #2b2b43;
+}
+.main-container .aside-content .card .card-details .add-to-cart {
+  display: flex;
+  justify-content: space-between;
+}
+.main-container .aside-content .card .card-details .add-to-cart .price {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 70;
+  font-size: 24px;
+}
+.main-container .aside-content .card .card-details .add-to-cart .fa-plus-circle {
+  color: #4e60ff;
+  cursor: pointer;
+}
+.main-container .aside-content .card .add-btn {
+  display: flex;
+  width: 100px;
+  margin-top: 1rem;
+  padding: 15px 10px;
+  color: #4e60ff;
+  background: #edeef2;
+  border-radius: 7px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .aside-content .rating {
+    max-width: 55%;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+}
+.main-container .aside-content .roll {
+  max-width: 30%;
+}
+@media only screen and (max-width: 780px) {
+  .main-container .aside-content .roll {
+    max-width: 80%;
+  }
+}
+.main-container .aside-content .roll img {
+  width: 100%;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .aside-content .nigiri {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    padding: 0.5rem;
+    max-width: 80%;
+    bottom: 30%;
+    right: 18%;
+  }
+}
+@media only screen and (max-height: 700px) {
+  .main-container .aside-content .nigiri {
+    position: static;
+    max-width: 80%;
+  }
+}
+.main-container .aside-content .super-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 55%;
+  margin-bottom: 5%;
+}
+.main-container .aside-content .super-text h2 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  color: #ffffff;
+}
+.main-container .aside-content .super-text p {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14;
+  color: #ffffff;
+  text-align: center;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,415 @@
+@import "../../home/mixins.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  min-height: 20vh;
+  padding: 1rem 7rem;
+}
+@media only screen and (max-width: 780px) {
+  .main-header {
+    padding: 1rem 3rem;
+  }
+}
+.main-header .logo {
+  transition: 4s ease;
+  cursor: pointer;
+}
+.main-header .logo img {
+  width: 100%;
+}
+.main-header .logo:hover {
+  transform: rotateY(180deg);
+}
+@media only screen and (max-width: 1250px) {
+  .main-header .search-bar {
+    display: none;
+  }
+}
+.main-header .search-bar .main-search {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  padding: 5px;
+  border-radius: 16px;
+}
+.main-header .search-bar .main-search:focus {
+  border-color: #4e60ff;
+}
+.main-header .search-bar .search-btn {
+  padding: 10px 15px;
+  color: #4e60ff;
+  border: #4e60ff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.main-header .main-nav {
+  display: flex;
+}
+@media only screen and (max-width: 785px) {
+  .main-header .main-nav {
+    display: none;
+  }
+}
+.main-header .main-nav .main-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+.main-header .main-nav .main-list li a {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: #4e60ff;
+  text-decoration: none;
+}
+.main-header .customer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.main-header .customer .cart {
+  color: #4e60ff;
+}
+.main-header .customer .user-img {
+  width: 70%;
+}
+.main-header .menu {
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background-color: #c7c8d2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 780px) {
+  .main-header .menu {
+    display: none;
+  }
+}
+.main-header .menu div {
+  border: 1px solid #2b2b43;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stratch;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 2rem;
+}
+@media only screen and (min-width: 780px) {
+  .main-container {
+    flex-direction: row;
+    padding: 1rem 7rem;
+  }
+}
+.main-container .settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .settings {
+    width: 25%;
+    justify-content: flex-start;
+  }
+}
+.main-container .settings .content-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  color: #2b2b43;
+  cursor: pointer;
+}
+.main-container .settings .set-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #f3f4ff;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.main-container .settings .set-card:hover {
+  transform: translateY(25deg);
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.main-container .settings .set-card:hover .bounce {
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 17s;
+          animation-duration: 17s;
+  -webkit-backface-visibility: visible !important;
+          backface-visibility: visible !important;
+}
+.main-container .settings .set-card:active {
+  border: 2px solid #4e60ff;
+}
+.main-container .settings .set-card:active {
+  color: #4e60ff;
+}
+.main-container .settings .set-card :hover {
+  color: #4e60ff;
+  transform: scale(1.05);
+}
+.main-container .personal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .personal-info {
+    width: 70%;
+  }
+}
+.main-container .personal-info .content-title {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  color: #2b2b43;
+  cursor: pointer;
+}
+.main-container .personal-info .user-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid #83859c;
+  border-radius: 16px;
+}
+.main-container .personal-info .user-card .user-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+@-webkit-keyframes bounce-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.main-container .personal-info .user-card .user-intro .bounceInDown {
+  -webkit-animation-name: bounce-down;
+          animation-name: bounce-down;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-backface-visibility: visible !important;
+          backface-visibility: visible !important;
+}
+.main-container .personal-info .user-card .user-intro .user-avatar {
+  width: 20%;
+}
+.main-container .personal-info .user-card .user-intro .user-avatar img {
+  width: 100%;
+}
+.main-container .personal-info .user-card .user-intro .submit-btn, .main-container .personal-info .user-card .user-intro .remove-btn {
+  padding: 10px 15px;
+  color: #4e60ff;
+  background-color: #f3f4ff;
+  border: 1px solid #4e60ff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.7s ease;
+}
+.main-container .personal-info .user-card .user-intro .submit-btn:hover, .main-container .personal-info .user-card .user-intro .remove-btn:hover {
+  border-color: #2b2b43;
+  transform: scale(1.1);
+}
+.main-container .personal-info .user-card .user-intro .remove-btn {
+  border: none;
+}
+.main-container .personal-info .user-card .user-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stratch;
+  gap: 1rem;
+  width: 100%;
+}
+.main-container .personal-info .user-card .user-form label {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .personal-info .user-card .user-form label input {
+  padding: 10px 0 10px 5px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 10px;
+  color: #2b2b43;
+}
+.main-container .personal-info .user-card .user-form label input:focus {
+  border: 5px solid #31b431;
+}
+.main-container .personal-info .user-card .user-form fieldset, .main-container .personal-info .user-card .user-form fieldset legend {
+  border: none;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 550;
+  font-size: 17px;
+  color: #2b2b43;
+}
+.main-container .personal-info .user-card .user-form fieldset legend, .main-container .personal-info .user-card .user-form fieldset legend legend {
+  font-size: 24px;
+  font-weight: 700;
+}
+.main-container .personal-info .user-card .user-form fieldset label, .main-container .personal-info .user-card .user-form fieldset legend label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .personal-info .user-card .btns-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #83859c;
+    padding-top: 1rem;
+  }
+}
+.main-container .personal-info .user-card .btns-wrapper .logout-btn {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  width: 100%;
+  padding: 8px 0;
+  color: #a7230b;
+  border-radius: 10px;
+  border: 1px solid #a7230b;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .personal-info .user-card .btns-wrapper .logout-btn {
+    width: initial;
+    padding: 0 25px;
+    display: inline;
+  }
+}
+.main-container .personal-info .user-card .control-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid #83859c;
+}
+@media only screen and (min-width: 780px) {
+  .main-container .personal-info .user-card .control-btns {
+    border: none;
+    display: inline;
+  }
+}
+.main-container .personal-info .user-card .control-btns .discard-chgs, .main-container .personal-info .user-card .control-btns .save-chgs {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  height: inherit;
+  padding: 10px 15px;
+  color: #4e60ff;
+  border: 1px solid #4e60ff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.main-container .personal-info .user-card .control-btns .save-chgs {
+  background-color: #4e60ff;
+  color: #ffffff;
+}/*# sourceMappingURL=index.css.map */

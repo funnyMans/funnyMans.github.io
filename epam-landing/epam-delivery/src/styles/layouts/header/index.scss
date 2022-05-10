@@ -1,0 +1,86 @@
+@import "../../../../variables";
+@import "../../home/mixins.css";
+
+@mixin main-header {
+  @include container(flex, row, space-between, center, 1rem);
+  @media only screen and (max-width: 780px) {
+    padding: 1rem 3rem;
+  }
+  min-height: 20vh;
+  padding: 1rem 7rem;
+  .logo {
+    transition: 4s ease;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+    &:hover {
+      transform: rotateY(180deg);
+    }
+  }
+  .search-bar {
+    @media only screen and (max-width: 1250px) {
+      display: none;
+    }
+    .main-search {
+      @include nunito(14px, 400);
+      color: black;
+      padding: 5px;
+      border-radius: 16px;
+      &:focus {
+        border-color: $primary-default;
+      }
+    }
+    .search-btn {
+      padding: 10px 15px;
+      color: $primary-default;
+      border: $primary-default;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  .main-nav {
+    @media only screen and (max-width: 785px) {
+      display: none;
+    }
+    display: flex;
+    .main-list {
+      @include container(flex, row, space-between, center, 1rem);
+      list-style: none;
+      li {
+        a {
+          @include nunito(24px, 400);
+          color: $primary-default;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .customer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    .cart {
+      color: $primary-default;
+    }
+    .user-img {
+      width: 70%;
+    }
+  }
+  .menu {
+    @media only screen and (min-width: 780px) {
+      display: none;
+    }
+    width: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    background-color: $neutral-gray-light;
+    border-radius: 10px;
+    cursor: pointer;
+    div {
+      border: 1px solid $neutral-black;
+    }
+  }
+}

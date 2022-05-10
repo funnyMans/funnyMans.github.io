@@ -1,0 +1,81 @@
+@import "mixins";
+@import "../animations/animations";
+
+@mixin container($dis, $dir, $justCont, $alItem, $gap) {
+  display: $dis;
+  flex-direction: $dir;
+  justify-content: $justCont;
+  align-items: $alItem;
+  gap: $gap;
+}
+
+@mixin login {
+  @include animations-bounceInDown;
+  .logo {
+    @include logo;
+    cursor: pointer;
+    transition: 3s ease;
+    &:hover {
+      transform: rotateX(80deg);
+    }
+  }
+  .login-title {
+    @include login-title;
+  }
+  .login-text {
+    @include login-text;
+  }
+  .login-form {
+    @include login-form;
+  }
+  .create-account {
+    @include create-account;
+  }
+}
+
+@mixin aside-content {
+  @include container(flex, column, space-between, center, 3rem);
+  padding: 2rem;
+  background-color: $primary-default;
+  @media only screen and (min-width: 780px) {
+    @include container(flex, row, space-evenly, center, 0);
+    position: relative;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .card {
+    @include aside-card;
+  }
+  .rating {
+    @media only screen and (min-width: 780px) {
+      max-width: 55%;
+      max-height: fit-content;
+    }
+  }
+  .roll {
+    max-width: 30%;
+    @media only screen and (max-width: 780px) {
+      max-width: 80%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .nigiri {
+    @media only screen and (min-width: 780px) {
+      @include container(flex, row, flex-start, center, 1rem);
+      position: absolute;
+      padding: 0.5rem;
+      max-width: 80%;
+      bottom: 30%;
+      right: 18%;
+    }
+    @media only screen and (max-height: 700px) {
+      position: static;
+      max-width: 80%;
+    }
+  }
+  .super-text {
+    @include super-text;
+  }
+}

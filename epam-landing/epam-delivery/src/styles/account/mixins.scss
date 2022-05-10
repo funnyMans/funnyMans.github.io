@@ -1,0 +1,175 @@
+@import "../../../variables";
+@import "../animations/animations";
+
+@mixin nunito($size, $weight) {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin container($dis, $dir, $justCont, $alItem, $gap) {
+  display: $dis;
+  flex-direction: $dir;
+  justify-content: $justCont;
+  align-items: $alItem;
+  gap: $gap;
+}
+
+@mixin content-title {
+  @include nunito(26px, 700);
+  color: $neutral-black;
+  cursor: pointer;
+}
+
+@mixin set-card {
+  @include container(flex, row, flex-start, center, 1rem);
+
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: $primary-light;
+  border-radius: 16px;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(25deg);
+    @include animations-bounce;
+  }
+  &:active {
+    border: 2px solid $primary-default;
+
+    & {
+      color: $primary-default;
+    }
+  }
+  & {
+    & :hover {
+      color: $primary-default;
+      transform: scale(1.05);
+    }
+  }
+}
+
+@mixin user-card {
+  @include container(flex, column, space-between, flex-start, 1rem);
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid $neutral-gray;
+  border-radius: 16px;
+  .user-intro {
+    @include user-intro;
+  }
+  .user-form {
+    @include user-form;
+  }
+  .btns-wrapper {
+    @media only screen and (min-width: 780px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid $neutral-gray;
+      padding-top: 1rem;
+    }
+    .logout-btn {
+      @include nunito(18px, 700);
+      width: 100%;
+      padding: 8px 0;
+      color: $primary-danger;
+      border-radius: 10px;
+      border: 1px solid $primary-danger;
+      background-color: $main-white;
+      cursor: pointer;
+      @media only screen and (min-width: 780px) {
+        width: initial;
+        padding: 0 25px;
+        display: inline;
+      }
+    }
+  }
+  .control-btns {
+    @include control-btns;
+  }
+}
+
+@mixin user-intro {
+  @include animations-bounceInDown;
+  @include container(flex, row, space-between, center, 1rem);
+  padding: 1rem 0;
+  cursor: pointer;
+  .user-avatar {
+    width: 20%;
+    img {
+      width: 100%;
+    }
+  }
+  .submit-btn {
+    padding: 10px 15px;
+    color: $primary-default;
+    background-color: $primary-light;
+    border: 1px solid $primary-default;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.7s ease;
+    &:hover {
+      border-color: $neutral-black;
+      transform: scale(1.1);
+    }
+  }
+  .remove-btn {
+    @extend .submit-btn;
+    border: none;
+  }
+}
+
+@mixin user-form {
+  @include container(flex, column, space-between, stratch, 1rem);
+  width: 100%;
+  label {
+    display: flex;
+    flex-direction: column;
+    input {
+      padding: 10px 0 10px 5px;
+      @include nunito(14px, 500);
+      border-radius: 10px;
+      color: $neutral-black;
+      &:focus {
+        border: 5px solid $primary-success;
+      }
+    }
+  }
+  fieldset {
+    border: none;
+    @include nunito(17px, 550);
+    color: $neutral-black;
+    legend {
+      @extend fieldset;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    label {
+      @include container(flex, row, flex-start, center, 1rem);
+    }
+  }
+}
+@mixin control-btns {
+  @include container(flex, row, space-between, center, 1rem);
+  padding: 1rem 0;
+  border-top: 1px solid $neutral-gray;
+  @media only screen and (min-width: 780px) {
+    border: none;
+    display: inline;
+  }
+  .discard-chgs {
+    @include nunito(14px, 500);
+    height: inherit;
+    padding: 10px 15px;
+    color: $primary-default;
+    border: 1px solid $primary-default;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .save-chgs {
+    @extend .discard-chgs;
+    background-color: $primary-default;
+    color: $main-white;
+  }
+}

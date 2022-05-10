@@ -1,0 +1,26 @@
+@import "components", "../layouts/header/index";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-header {
+  @include main-header;
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
+}
+.main-container {
+  @include container(flex, column, space-between, center, 2rem);
+  min-height: 100vh;
+  padding: 2rem;
+
+  .main-content {
+    @include container(flex, column, space-between, flex-start, 1rem);
+    @include main-content;
+    padding: 1rem 0 5rem 0;
+  }
+  .aside-content {
+    @include aside-content;
+  }
+}
